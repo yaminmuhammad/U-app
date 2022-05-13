@@ -1,10 +1,12 @@
 import React from 'react'
 
+
 const ImageList = (props) => {
-    console.log(props.images);
-    return (
-        <div>Image List</div>
-    )
+    const images = props.images.map((image) => {
+        // eslint-disable-next-line jsx-a11y/alt-text
+        return <img src={image.urls.regular} />
+    });
+    return <div>{images}</div>;
 }
 
 export default ImageList;
